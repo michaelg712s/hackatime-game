@@ -41,6 +41,7 @@ player = pygame.transform.scale(player, (200,200))
 Burger = pygame.transform.scale(Burger, (50,50))
 Bomb = pygame.transform.scale(Bomb, (50,50))
 #rember to remove backround from charter 
+
 running = True
 clock = pygame.time.Clock()
 
