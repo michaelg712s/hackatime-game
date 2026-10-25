@@ -1,3 +1,14 @@
+import os
+import sys
+
+def resource_path(filename):
+    if getattr(sys, "frozen", False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, filename)
+
+
 #WELCOME TO THE CODE OF SANDWITCH GAME CODE
 # for hacktime project thing 
 # took  me 10 hours  im so bad im new to codeing 
@@ -12,16 +23,15 @@ pygame.init()
 start_time = pygame.time.get_ticks()
 screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Game")
-Bomb = pygame.image.load("Bomb.png")
-money = pygame.image.load("money.png")
-player = pygame.image.load("player.png")
-Burger = pygame.image.load("Burger.png")
-lose = pygame.image.load("lose.png")
-backround = pygame.image.load("Backround.gif")
-player2 = pygame.image.load("player2.png")
-player3 = pygame.image.load("player3.png")
-apple = pygame.image.load("apple.png")
-
+Bomb = pygame.image.load(resource_path("Bomb.png"))
+money = pygame.image.load(resource_path("money.png"))
+player = pygame.image.load(resource_path("player.png"))
+Burger = pygame.image.load(resource_path("Burger.png"))
+lose = pygame.image.load(resource_path("lose.png"))
+backround = pygame.image.load(resource_path("Backround.gif"))
+player2 = pygame.image.load(resource_path("player2.png"))
+player3 = pygame.image.load(resource_path("player3.png"))
+apple = pygame.image.load(resource_path("apple.png"))
 x = 250
 y = 450
 x2 = random.randint(0, 750)
